@@ -15,10 +15,10 @@ public class Java8SortTesting {
 	public static void main(String[] args){
 		
 		List<String> names = new ArrayList<String>();
-		names.add("Pooja");
-		names.add("Mukul");
-		names.add("Priya");
-		names.add("Abc");
+		names.add("abc");
+		names.add("def");
+		names.add("xyz");
+		names.add("pqr");
 		
 		Java8SortTesting test = new Java8SortTesting();
 		test.sortUsingJava8(names);
