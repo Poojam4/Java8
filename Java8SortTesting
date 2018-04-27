@@ -1,0 +1,46 @@
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+/**
+ * 
+ * Class to display basic usage of Lambda Expression
+ * 
+ * @author poojamodi
+ *
+ */
+public class Java8SortTesting {
+	
+	public static void main(String[] args){
+		
+		List<String> names = new ArrayList<String>();
+		names.add("Pooja");
+		names.add("Mukul");
+		names.add("Priya");
+		names.add("Abc");
+		
+		Java8SortTesting test = new Java8SortTesting();
+		test.sortUsingJava8(names);
+		test.sortUsingJava7(names);
+	}
+
+	private void sortUsingJava7(List<String> names) {
+
+		Collections.sort(names, new Comparator<String>() {
+			@Override
+			public int compare(String s1, String s2) {
+				return s1.compareTo(s2);
+			}
+		});
+
+		System.out.println("Sorting using Java 7 " + names);
+	}
+
+	private void sortUsingJava8(List<String> names) {
+		Collections.sort(names, (s1,s2) -> s1.compareTo(s2));
+		System.out.println("Sorting using Java 8 " + names);
+	}
+	
+	
+}
